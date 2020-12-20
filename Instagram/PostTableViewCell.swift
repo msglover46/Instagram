@@ -62,7 +62,7 @@ class PostTableViewCell: UITableViewCell {
         }
         
         // コメント数の表示
-        let commentNumber = postData.authorArray.count
+        let commentNumber = postData.comments.count
         if commentNumber > 0 {
             countCommentLabel.text = "\(commentNumber)件のコメント"
         } else {
@@ -71,9 +71,9 @@ class PostTableViewCell: UITableViewCell {
         
         // コメントの表示
         var commentContents: String = ""
-        for i in 0..<postData.authorArray.count {
-            let commentAuth = postData.authorArray[i]
-            let commentComment = postData.textArray[i]
+        for commentValue in postData.comments {
+            let commentAuth = commentValue.author!
+            let commentComment = commentValue.content!
             commentContents += commentAuth + ": " + commentComment + "\n"
         }
         self.commentLabel.text = commentContents

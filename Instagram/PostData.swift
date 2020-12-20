@@ -15,8 +15,7 @@ class PostData: NSObject {
     var date: Date?
     var likes: [String] = []
     var isLiked: Bool = false
-    var authorArray: [String] = []
-    var textArray: [String] = []
+    var comments: [Comment] = []
     
     init(document: QueryDocumentSnapshot) {
         self.id = document.documentID
@@ -43,12 +42,10 @@ class PostData: NSObject {
         }
         
         if let commentArray = postDic["comments"] as? [[String: String]] {
-
-            for value in commentArray {
-                authorArray.append(value["author"]!)
-                textArray.append(value["comment"]!)
+            for comment in commentArray {
+                self.comments.append(Comment(author: comment["author"]!, content: comment["comment"]!))
             }
         }
-        
+
     }
 }

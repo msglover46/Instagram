@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A422EB9B258F0AAC007E88EF /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A422EB9A258F0AAC007E88EF /* Comment.swift */; };
 		A44582F12587DAC700097E59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44582F02587DAC700097E59 /* AppDelegate.swift */; };
 		A44582F32587DAC700097E59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44582F22587DAC700097E59 /* SceneDelegate.swift */; };
 		A44582F82587DAC700097E59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44582F62587DAC700097E59 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		49F5513D850726BB0377CDF3 /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A45EA7FBD59B69CCC0B975 /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
+		A422EB9A258F0AAC007E88EF /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		A44582ED2587DAC700097E59 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44582F02587DAC700097E59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A44582F22587DAC700097E59 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				A44583162587DF2B00097E59 /* TabBarController.swift */,
 				A4AB74CF258CC12000407F02 /* Const.swift */,
 				A4AB74D2258CD2FF00407F02 /* PostData.swift */,
+				A422EB9A258F0AAC007E88EF /* Comment.swift */,
 				A4AB74D9258CD63B00407F02 /* PostTableViewCell.swift */,
 				A4AB74DA258CD63B00407F02 /* PostTableViewCell.xib */,
 				A44582F62587DAC700097E59 /* Main.storyboard */,
@@ -248,6 +251,7 @@
 				A44583132587DCD800097E59 /* SettingViewController.swift in Sources */,
 				A4AB74D3258CD2FF00407F02 /* PostData.swift in Sources */,
 				A44583062587DC9B00097E59 /* LoginViewController.swift in Sources */,
+				A422EB9B258F0AAC007E88EF /* Comment.swift in Sources */,
 				A4AB74DF258D263400407F02 /* CommentViewController.swift in Sources */,
 				A44582F12587DAC700097E59 /* AppDelegate.swift in Sources */,
 				A44582F32587DAC700097E59 /* SceneDelegate.swift in Sources */,

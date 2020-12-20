@@ -15,12 +15,14 @@ class PostData: NSObject {
     var date: Date?
     var likes: [String] = []
     var isLiked: Bool = false
+    var authorArray: [String] = []
+    var textArray: [String] = []
     
     init(document: QueryDocumentSnapshot) {
         self.id = document.documentID
         
         let postDic = document.data()
-        
+
         self.name = postDic["name"] as? String
         
         self.caption = postDic["caption"] as? String
@@ -31,6 +33,7 @@ class PostData: NSObject {
         if let likes = postDic["likes"] as? [String] {
             self.likes = likes
         }
+        
         if let myid = Auth.auth().currentUser?.uid {
             // likesの配列の中にmyidが含まれているかチェックすることで、自分がいいねを押しているかを判断
             if self.likes.firstIndex(of: myid) != nil {
@@ -38,6 +41,14 @@ class PostData: NSObject {
                 self.isLiked = true
             }
         }
-    }
+        
+        if let commentArray = postDic["comments"] as? [[String: String]] {
 
+            for value in commentArray {
+                authorArray.append(value["author"]!)
+                textArray.append(value["comment"]!)
+            }
+        }
+        
+    }
 }
